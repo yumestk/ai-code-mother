@@ -1,10 +1,14 @@
 package com.yume.yuaicodemother.service;
 
+import com.mybatisflex.core.query.QueryWrapper;
 import com.mybatisflex.core.service.IService;
+import com.yume.yuaicodemother.model.dto.UserQueryRequest;
 import com.yume.yuaicodemother.model.entity.User;
 import com.yume.yuaicodemother.model.vo.LoginUserVO;
+import com.yume.yuaicodemother.model.vo.UserVO;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+
+import java.util.List;
 
 /**
  * 用户 服务层。
@@ -46,6 +50,27 @@ public interface UserService extends IService<User> {
      * @return
      */
     User getLoginUser(HttpServletRequest request);
+
+    /**
+     * 获取脱敏后的用户信息
+     * @param user 用户信息
+     * @return
+     */
+    UserVO getUserVO(User user);
+
+    /**
+     * 获取脱敏后的用户信息(分页查询)
+     * @param userList 用户列表
+     * @return
+     */
+    List<UserVO> getUserVOList(List<User> userList);
+
+    /**
+     * 根据查询条件构造数据查询条件
+     * @param userQueryRequest
+     * @return
+     */
+    QueryWrapper getQueryWrapper(UserQueryRequest userQueryRequest);
 
     /**
      * 获得脱敏的已登录用户信息
