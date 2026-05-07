@@ -2,7 +2,7 @@ package com.yume.yuaicodemother.service;
 
 import com.mybatisflex.core.query.QueryWrapper;
 import com.mybatisflex.core.service.IService;
-import com.yume.yuaicodemother.model.dto.UserQueryRequest;
+import com.yume.yuaicodemother.model.dto.user.UserQueryRequest;
 import com.yume.yuaicodemother.model.entity.User;
 import com.yume.yuaicodemother.model.vo.LoginUserVO;
 import com.yume.yuaicodemother.model.vo.UserVO;

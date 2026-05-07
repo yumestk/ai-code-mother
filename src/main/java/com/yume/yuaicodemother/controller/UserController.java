@@ -10,25 +10,19 @@ import com.yume.yuaicodemother.constant.UserConstant;
 import com.yume.yuaicodemother.exception.BusinessException;
 import com.yume.yuaicodemother.exception.ErrorCode;
 import com.yume.yuaicodemother.exception.ThrowUtils;
-import com.yume.yuaicodemother.model.dto.*;
+import com.yume.yuaicodemother.model.dto.user.*;
 import com.yume.yuaicodemother.model.vo.LoginUserVO;
 import com.yume.yuaicodemother.model.vo.UserVO;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
-import org.springframework.boot.autoconfigure.graphql.GraphQlProperties;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.yume.yuaicodemother.model.entity.User;
 import com.yume.yuaicodemother.service.UserService;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
-
-import static com.yume.yuaicodemother.constant.UserConstant.USER_LOGIN_STATE;
 
 /**
  * 用户 控制层。
