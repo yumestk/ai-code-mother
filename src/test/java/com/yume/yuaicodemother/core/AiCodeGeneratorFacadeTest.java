@@ -1,5 +1,7 @@
 package com.yume.yuaicodemother.core;
 
+import com.yume.yuaicodemother.ai.AiCodeGeneratorService;
+import com.yume.yuaicodemother.ai.model.HtmlCodeResult;
 import com.yume.yuaicodemother.model.enums.CodeGenTypeEnum;
 import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Assertions;
@@ -36,4 +38,7 @@ class AiCodeGeneratorFacadeTest {
         String completeContent = String.join("", result);
         Assertions.assertNotNull(completeContent);
     }
+
+
+
 }

@@ -24,7 +24,7 @@ public interface AiCodeGeneratorService {
     MultiFileCodeResult generateMultiFileCode(String userMessage);
 
     /**
-     * 生成代码
+     * 生成代码(流式)
      * @param userMessage 用户提示词
      * @return AI 输出的结果
      */
@@ -32,7 +32,7 @@ public interface AiCodeGeneratorService {
     Flux<String> generateHtmlCodeStream(String userMessage);
 
     /**
-     * 生成多文件代码
+     * 生成多文件代码(流式)
      * @param userMessage 用户提示词
      * @return AI 输出的结果
      */
