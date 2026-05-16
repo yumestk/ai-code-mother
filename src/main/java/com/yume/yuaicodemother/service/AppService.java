@@ -2,6 +2,7 @@ package com.yume.yuaicodemother.service;
 
 import com.mybatisflex.core.query.QueryWrapper;
 import com.mybatisflex.core.service.IService;
+import com.yume.yuaicodemother.model.dto.app.AppAddRequest;
 import com.yume.yuaicodemother.model.dto.app.AppQueryRequest;
 import com.yume.yuaicodemother.model.entity.App;
 import com.yume.yuaicodemother.model.entity.User;
@@ -25,6 +26,14 @@ public interface AppService extends IService<App> {
      * @return
      */
     Flux<String> chatToGenCode(Long appId, String message, User loginUser);
+
+    /**
+     * 创建应用
+     * @param appAddRequest
+     * @param loginUser
+     * @return
+     */
+    Long createApp(AppAddRequest appAddRequest, User loginUser);
 
     /**
      * 应用部署
